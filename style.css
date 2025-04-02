@@ -362,10 +362,6 @@ footer {
         font-size: 15px;
     }
 
-    .dynamic-text li span::after {
-        height: 110%;
-    }
-
     #resultado {
         margin: -60px -16px;
         margin-top: 15px;
