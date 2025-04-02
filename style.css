@@ -78,7 +78,7 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
-    top: 2px;
+    top: 1px;
     background-color: #090917;
     border-left: 2px solid #4A5DCD;
     animation: digito 6s steps(40) infinite;
@@ -346,33 +346,33 @@ footer {
         height: auto;
         min-height: 100vh;
     }
-    
+
     .titulo h1 {
         font-size: 22px;
         text-align: center;
     }
-    
+
     .titulo .dynamic-text {
         height: 50px;
         line-height: 50px;
         margin-left: 0;
     }
-    
+
     .dynamic-text li span {
         font-size: 15px;
     }
-    
+
     #resultado {
         margin: -60px -17px;
         margin-top: 15px;
     }
-    
+
     @keyframes slide {
         100% {
             top: -50px;
         }
     }
-    
+
     main {
         width: 90%;
         max-width: 350px;
@@ -382,16 +382,18 @@ footer {
         padding: 30px 15px 20px;
         margin-bottom: 80px;
     }
-    
+
     .botao {
         padding: 14px 80px;
         font-size: 16px;
     }
-    
+
     footer {
         position: absolute;
         padding: 12px;
         font-size: 16px;
+        bottom: 0;
+        width: 100%;
         background-color: rgba(0, 0, 0, 0.9);
     }
 }
