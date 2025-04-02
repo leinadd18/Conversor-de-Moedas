@@ -307,6 +307,8 @@ footer {
         display: flex;
         flex-direction: column;
         align-items: center;
+        position: relative;
+        top: 104px;
     }
 
     .titulo h1 {
@@ -314,12 +316,14 @@ footer {
     }
 
     .dynamic-text li span {
-        position: relative;
         font-size: 17px;
     }
 
+    .dynamic-text li span::after {
+        top: 2px;
+    }
+
     .dynamic-text li {
-        font-size: 8px;
         animation: slide 12s steps(40) infinite;
     }
 
@@ -337,5 +341,56 @@ footer {
 
     footer {
         font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 438px) {
+    body {
+        overflow-y: auto;
+        height: auto;
+        min-height: 100vh;
+    }
+    
+    .titulo h1 {
+        font-size: 22px;
+        text-align: center;
+    }
+    
+    .titulo .dynamic-text {
+        height: 50px;
+        line-height: 50px;
+        margin-left: 0;
+    }
+    
+    .dynamic-text li span {
+        font-size: 15px;
+    }
+    
+    @keyframes slide {
+        100% {
+            top: -50px;
+        }
+    }
+    
+    main {
+        width: 90%;
+        max-width: 350px;
+        position: relative;
+        top: 180px;
+        transform: translateX(-50%);
+        padding: 30px 15px 20px;
+        margin-bottom: 80px;
+    }
+    
+    .botao {
+        padding: 14px 80px;
+        font-size: 16px;
+    }
+    
+    footer {
+        position: fixed;
+        padding: 12px;
+        font-size: 14px;
+        background-color: rgba(0, 0, 0, 0.9);
     }
 }
