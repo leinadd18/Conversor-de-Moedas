@@ -78,7 +78,7 @@ body {
     position: absolute;
     height: 100%;
     width: 100%;
-    top: 1px;
+    top: 2px;
     background-color: #090917;
     border-left: 2px solid #4A5DCD;
     animation: digito 6s steps(40) infinite;
@@ -319,10 +319,6 @@ footer {
         font-size: 17px;
     }
 
-    .dynamic-text li span::after {
-        top: 2px;
-    }
-
     .dynamic-text li {
         animation: slide 12s steps(40) infinite;
     }
@@ -366,6 +362,11 @@ footer {
         font-size: 15px;
     }
     
+    #resultado {
+        margin: -60px -17px;
+        margin-top: 15px;
+    }
+    
     @keyframes slide {
         100% {
             top: -50px;
@@ -388,9 +389,9 @@ footer {
     }
     
     footer {
-        position: fixed;
+        position: absolute;
         padding: 12px;
-        font-size: 14px;
+        font-size: 16px;
         background-color: rgba(0, 0, 0, 0.9);
     }
 }
