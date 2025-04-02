@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+        rel="stylesheet">
+        <link rel="icon" href="img/coins.ico" type="image/x-icon">
+    <title>Conversor de Moedas</title>
+</head>
+
+<body>
+
+    <div class="titulo">
+        <h1>Bem-vindo(a)!</h1>
+        <ul class="dynamic-text">
+            <li><span>converta de forma fácil e ágil, sem complicação💱</span></li>
+            <li><span>sua moeda, seu mundo, sua transformação!</span></li>
+        </ul>
+    </div>
+    <main>
+        <label>
+            Converter de <br>
+            <div class="currency-container">
+                <input type="number" placeholder="0.00" step="0.1" min="0" class="currency-input cursor" id="valor">
+                <span class=" meio">|</span>
+                <select class="currency-select select-chevron-arrow" id="opcao">
+                    <option value="" disabled selected hidden>
+                        Selecione
+                    </option>
+                    <option value="BRL">
+                        R$ BRL
+                    </option>
+                    <option value="USD">
+                        $ USD
+                    </option>
+                    <option value="EUR">
+                        EUR €
+                    </option>
+                </select>
+            </div>
+        </label>
+
+        <label>
+            Coverter para
+            <select class="select-chevron-arrow borda" id="opcaosegunda">
+                <option value="" disabled selected hidden>
+                    Selecione uma moeda
+                </option>
+                <option value="USD">
+                    $ Dólar Americano
+                </option>
+                <option value="EUR">
+                    Euro €
+                </option>
+                <option value="BRL">
+                    R$ Real
+                </option>
+            </select>
+
+        </label>
+        <div class="botao-container">
+            <button class="botao" onclick="acionaBotao()">Converter</button>
+        </div>
+
+        <section id="resultado">
+            <div class="resultado-container">
+                <div>
+                    <p id="one">R$ 0,00 BRL</p>
+                </div>
+
+                <p> = </p>
+
+                <div>
+                    <p id="two">$ 0,00 USD</p>
+                </div>
+            </div>
+            <div id="container-result">
+                <img src="" id="img">
+                <p id="escrita"></p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Conversor de Moedas - Daniel Dias Lopes. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+<script src="script.js"></script>
+<script src="arrowSelect.js"></script>
+
+</html>

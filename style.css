@@ -1,0 +1,341 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+
+body {
+    background-image: url('./img/Background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.titulo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: 70px;
+}
+
+.titulo h1 {
+    text-transform: uppercase;
+    color: transparent;
+    background: linear-gradient(to right, #000dff, #004cff, #008cff, #00c9ff, #5efff6);
+    -webkit-background-clip: text;
+    background-size: 1000%;
+    animation: cores 3s linear infinite;
+}
+
+@keyframes cores {
+    0% {
+        background-position: 0% 100%;
+    }
+
+    50% {
+        background-position: 100% 0%;
+    }
+
+    100% {
+        background-position: 0% 100%;
+    }
+}
+
+.titulo .dynamic-text {
+    margin-left: 5px;
+    height: 87px;
+    line-height: 82px;
+    overflow: hidden;
+}
+
+.dynamic-text li {
+    list-style: none;
+    font-size: 32px;
+    font-weight: bold;
+    color: #ffff;
+    position: relative;
+    animation: slide 12s steps(40) infinite;
+}
+
+@keyframes slide {
+    100% {
+        top: -83px;
+    }
+}
+
+.dynamic-text li span {
+    position: relative;
+}
+
+.dynamic-text li span::after {
+    content: "";
+    left: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 1px;
+    background-color: #090917;
+    border-left: 2px solid #4A5DCD;
+    animation: digito 6s steps(40) infinite;
+}
+
+@keyframes digito {
+    100% {
+        left: 100%;
+        margin: 0 -35px 0 35px;
+    }
+}
+
+main {
+    width: 375px;
+    background: #1b1d47;
+    border-radius: 20px;
+    padding: 44px 24px 23px;
+    border: 1px solid #1920be;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    bottom: 85px;
+}
+
+
+label {
+    color: #B2B8DE;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.borda {
+    display: flex;
+    align-items: center;
+    border: 1px solid #1920be;
+    padding: 15px 15px;
+    height: 100%;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 10px;
+    background: #0E0F25;
+    color: #F1F2F6;
+    outline: none;
+}
+
+
+.currency-container {
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    border: 1px solid #1920be;
+    background: #0E0F25;
+    width: 100%;
+    max-width: 300px;
+    height: 48px;
+    position: relative;
+}
+
+.currency-input {
+    border: none;
+    outline: none;
+    font-size: 16px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 25px;
+    background: #0E0F25;
+    color: #F1F2F6;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+.cursor {
+    caret-color: #4A5DCD;
+}
+
+.meio {
+    color: #F1F2F6;
+    margin: 0 5px;
+}
+
+.currency-select {
+    display: flex;
+    align-items: center;
+    border: none;
+    padding: 15px 15px;
+    height: 100%;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 10px;
+    border-right: none;
+    background: #0E0F25;
+    color: #F1F2F6;
+    outline: none;
+}
+
+.select-chevron-arrow {
+    appearance: none;
+    padding-right: 30px;
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+    /* Seta Chevron para baixo por padrão */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23666" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>');
+}
+
+.select-chevron-arrow:focus {
+    /* Seta Chevron para cima quando selecionado */
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23333" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 15 12 9 18 15"/></svg>');
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.1);
+}
+
+
+.botao-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.botao {
+    border-radius: 8px;
+    background: #2F34AB;
+    color: #F1F2F6;
+    border: none;
+    padding: 16px 130px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: transform 0.1s linear;
+}
+
+.botao:hover {
+    background: #4A5DCD;
+    opacity: .9;
+}
+
+.botao:active {
+    font-weight: bold;
+    transform: scale(0.85);
+}
+
+#resultado {
+    display: flex;
+    padding: 50px;
+    flex-direction: column;
+    border-radius: 0px 0px 19px 20px;
+    background: #101474;
+    margin: -60px -25px;
+    margin-top: 15px;
+    color: #B2B8DE;
+    border-top-style: dashed;
+    border-bottom: 1px inset #fff;
+    visibility: hidden;
+}
+
+.ativa {
+    animation: descerSuave 0.7s ease-out forwards;
+}
+
+@keyframes descerSuave {
+    0% {
+        opacity: 0;
+        transform: translateY(-7px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#container-result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #F1F2F6;
+    font-size: 30px;
+    font-weight: bold;
+    position: relative;
+    top: 25px;
+    gap: 7px;
+}
+
+.resultado-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    position: relative;
+    bottom: 5px;
+    font-size: 13px;
+
+}
+
+footer {
+    border-top: #f1e5e558 1px solid;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #000000bb;
+}
+
+@media screen and (max-width: 1012px) {
+    body {
+        overflow-y: auto;
+    }
+
+    .titulo {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .titulo h1 {
+        font-size: 25px;
+    }
+
+    .dynamic-text li span {
+        position: relative;
+        font-size: 17px;
+    }
+
+    .dynamic-text li {
+        font-size: 8px;
+        animation: slide 12s steps(40) infinite;
+    }
+
+    main {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -55%);
+        max-width: 75%;
+    }
+
+    .botao {
+        padding: 16px 120px;
+    }
+
+    footer {
+        font-size: 16px;
+    }
+}
