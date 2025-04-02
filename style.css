@@ -363,7 +363,7 @@ footer {
     }
 
     .dynamic-text li span::after {
-        height: 150%;
+        height: 110%;
     }
 
     #resultado {
